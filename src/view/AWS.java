@@ -14,14 +14,14 @@ public class AWS extends Application {
     
     @Override
     public void start(Stage primaryStage) {
-        Button btn = new Button();
-        btn.setText("Say 'Hello World'");
-        btn.setOnAction((ActionEvent event) -> {
-            System.out.println("Hello World!");
-        });
+        //Button btn = new Button();
+        //btn.setText("Say 'Hello World'");
+        //btn.setOnAction((ActionEvent event) -> {
+        //    System.out.println("Hello World!");
+        //});
         
         StackPane root = new StackPane();
-        root.getChildren().add(btn);
+        //root.getChildren().add(btn);
         
         Circle circle = new Circle(100, Color.BLACK);
         root.getChildren().add(circle);
