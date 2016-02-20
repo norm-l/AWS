@@ -1,17 +1,15 @@
-package aws.view;
+package view;
 
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
+import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 
-/**
- *
- * @author Lukas
- */
+
 public class AWS extends Application {
     
     @Override
@@ -25,14 +23,12 @@ public class AWS extends Application {
         StackPane root = new StackPane();
         root.getChildren().add(btn);
         
-        Circle circle = new Circle();
-        circle.setCenterX(100.0f);
-        circle.setCenterY(100.0f);
-        circle.setRadius(50.0f);
+        Circle circle = new Circle(100, Color.BLACK);
+        root.getChildren().add(circle);
         
-        Scene scene = new Scene(root, 300, 250);
+        Scene scene = new Scene(root, 320, 480); // Small [Phone]: 320x480 | Large [Tablet]: 1024x768
         
-        primaryStage.setTitle("Hello World!");
+        primaryStage.setTitle("AWS");
         primaryStage.setScene(scene);
         primaryStage.show();
     }
