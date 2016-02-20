@@ -27,7 +27,7 @@ public class AWS extends Application {
         root.getChildren().add(circle);
         
         Scene scene = new Scene(root, 320, 480); // Small [Phone]: 320x480 | Large [Tablet]: 1024x768
-        // as
+
         primaryStage.setTitle("AWS");
         primaryStage.setScene(scene);
         primaryStage.show();
