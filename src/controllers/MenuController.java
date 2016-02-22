@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package controllers;
 
 import java.io.IOException;
@@ -17,15 +12,11 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import model.Main;
 
-/**
- * FXML Controller class
- *
- * @author Lukas
- */
+
 public class MenuController implements Initializable {
 
-    @FXML private Button displayOne;
-    @FXML private Button displayTwo;
+    @FXML private Button displaySmall;
+    @FXML private Button displayLarge;
 
 
     @Override
@@ -33,7 +24,7 @@ public class MenuController implements Initializable {
         // TODO
     }    
 
-    @FXML private void switchToOne(ActionEvent event) {
+    @FXML private void switchToSmall(ActionEvent event) {
         try {
             URL smallUrl = getClass().getResource("/resources/view/Small.fxml");
             AnchorPane smallScreen = FXMLLoader.load(smallUrl);
@@ -41,13 +32,15 @@ public class MenuController implements Initializable {
             BorderPane border = Main.getRoot();
             border.setCenter(smallScreen);
             
+            Main.getStage().setWidth(320.0);
+            Main.getStage().setHeight(480.0);
         } catch (IOException e) {
             e.printStackTrace();
         }
             
     }
 
-    @FXML private void switchToTwo(ActionEvent event) {
+    @FXML private void switchToLarge(ActionEvent event) {
         try {
             URL largeUrl = getClass().getResource("/resources/view/Large.fxml");
             AnchorPane largeScreen = FXMLLoader.load(largeUrl);
@@ -55,6 +48,8 @@ public class MenuController implements Initializable {
             BorderPane border = Main.getRoot();
             border.setCenter(largeScreen);
             
+            Main.getStage().setWidth(1024.0);
+            Main.getStage().setHeight(768.0); 
         } catch (IOException e) {
             e.printStackTrace();
         }
