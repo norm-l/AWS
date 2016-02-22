@@ -64,7 +64,7 @@ public class MenuController implements Initializable {
         }
             
     }
-    
+ 
     @FXML private void switchToSmallSettings(ActionEvent event) {
         try {
             URL smallUrl = getClass()
@@ -82,7 +82,7 @@ public class MenuController implements Initializable {
         }
             
     }
-    
+
     @FXML private void switchToLargeMain(ActionEvent event) {
         try {
             URL largeUrl = getClass()

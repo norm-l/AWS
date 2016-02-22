@@ -15,7 +15,7 @@
             <MenuItem fx:id="displaySmallSettings" mnemonicParsing="false" onAction="#switchToSmallSettings" text="Settings" />
       </items>
     </Menu>
-    <Menu mnemonicParsing="false" text="Large">
+    <Menu mnemonicParsing="false" text="Large (Incomplete)">
       <items>
         <MenuItem fx:id="displayLargeStart" mnemonicParsing="false" onAction="#switchToLargeStart" text="Start" />
             <MenuItem fx:id="displayLargeMain" mnemonicParsing="false" onAction="#switchToLargeMain" text="Main" />

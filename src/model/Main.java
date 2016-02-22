@@ -5,7 +5,6 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.MenuBar;
-import javafx.scene.control.ToolBar;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
@@ -41,7 +40,7 @@ public class Main extends Application {
         scene.getStylesheets().add(getClass()
                 .getResource("/resources/css/main.css").toExternalForm());
         stage.setScene(scene);
-        //stage.setResizable(false); re-set after comfortable with sizing
+        stage.setResizable(false);
         stage.show();
     }
     
