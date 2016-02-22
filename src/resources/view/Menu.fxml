@@ -6,17 +6,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<ToolBar xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="controllers.MenuController">
+<ToolBar maxHeight="-Infinity" minHeight="-Infinity" prefHeight="35.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MenuController">
   <items>
-    <Button fx:id="displaySmall" 
-            mnemonicParsing="false" 
-            onAction="#switchToSmall" 
-            prefWidth="60.0" 
-            text="Small" />
-      <Button fx:id="displayLarge" 
-              mnemonicParsing="false" 
-              onAction="#switchToLarge" 
-              prefWidth="60.0" 
-              text="Large" />
+    <Button fx:id="displaySmall" mnemonicParsing="false" onAction="#switchToSmall" prefWidth="60.0" text="Small" />
+      <Button fx:id="displayLarge" mnemonicParsing="false" onAction="#switchToLarge" prefWidth="60.0" text="Large" />
   </items>
 </ToolBar>

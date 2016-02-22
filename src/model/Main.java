@@ -14,10 +14,10 @@ public class Main extends Application {
     
     private static Stage stage;
     private static Scene scene;
-    private static BorderPane root = new BorderPane();
+    private static final BorderPane ROOT = new BorderPane();
     
     public static BorderPane getRoot() {
-        return root;
+        return ROOT;
     }
     
     @Override
@@ -29,12 +29,12 @@ public class Main extends Application {
         URL smallUrl = getClass().getResource("/resources/view/Small.fxml");
         AnchorPane smallScreen = FXMLLoader.load(smallUrl);
         
-        root.setTop(bar);
-        root.setCenter(smallScreen);
+        ROOT.setTop(bar);
+        ROOT.setCenter(smallScreen);
         
         Main.stage = stage;
         
-        scene = new Scene(root, 320, 480);
+        scene = new Scene(ROOT, 320, 480+35);
         scene
                 .getStylesheets()
                 .add(getClass()

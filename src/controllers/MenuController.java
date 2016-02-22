@@ -32,8 +32,9 @@ public class MenuController implements Initializable {
             BorderPane border = Main.getRoot();
             border.setCenter(smallScreen);
             
-            Main.getStage().setWidth(320.0);
-            Main.getStage().setHeight(480.0);
+            Main.getStage().setWidth(320+16);
+            Main.getStage().setHeight(480+74);
+            
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -48,8 +49,9 @@ public class MenuController implements Initializable {
             BorderPane border = Main.getRoot();
             border.setCenter(largeScreen);
             
-            Main.getStage().setWidth(1024.0);
-            Main.getStage().setHeight(768.0); 
+            Main.getStage().setWidth(1024+15);
+            Main.getStage().setHeight(768+75);
+            
         } catch (IOException e) {
             e.printStackTrace();
         }
