@@ -4,6 +4,7 @@ import java.net.URL;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.MenuBar;
 import javafx.scene.control.ToolBar;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
@@ -25,10 +26,10 @@ public class Main extends Application {
         
         URL toolBarUrl = getClass()
                 .getResource("/resources/view/Menu.fxml");
-        ToolBar bar = FXMLLoader.load(toolBarUrl);
+        MenuBar bar = FXMLLoader.load(toolBarUrl);
         
         URL smallUrl = getClass()
-                .getResource("/resources/view/small/Main.fxml");
+                .getResource("/resources/view/small/Start.fxml");
         AnchorPane smallScreen = FXMLLoader.load(smallUrl);
         
         ROOT.setTop(bar);
