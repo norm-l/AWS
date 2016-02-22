@@ -23,10 +23,12 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         
-        URL toolBarUrl = getClass().getResource("/resources/view/Menu.fxml");
+        URL toolBarUrl = getClass()
+                .getResource("/resources/view/Menu.fxml");
         ToolBar bar = FXMLLoader.load(toolBarUrl);
         
-        URL smallUrl = getClass().getResource("/resources/view/Small.fxml");
+        URL smallUrl = getClass()
+                .getResource("/resources/view/small/Main.fxml");
         AnchorPane smallScreen = FXMLLoader.load(smallUrl);
         
         ROOT.setTop(bar);
@@ -35,13 +37,10 @@ public class Main extends Application {
         Main.stage = stage;
         
         scene = new Scene(ROOT, 320, 480+35);
-        scene
-                .getStylesheets()
-                .add(getClass()
-                .getResource("/resources/css/main.css")
-                .toExternalForm());
+        scene.getStylesheets().add(getClass()
+                .getResource("/resources/css/main.css").toExternalForm());
         stage.setScene(scene);
-        //stage.setResizable(false);
+        //stage.setResizable(false); re-set after comfortable with sizing
         stage.show();
     }
     

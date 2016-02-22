@@ -26,7 +26,8 @@ public class MenuController implements Initializable {
 
     @FXML private void switchToSmall(ActionEvent event) {
         try {
-            URL smallUrl = getClass().getResource("/resources/view/Small.fxml");
+            URL smallUrl = getClass()
+                    .getResource("/resources/view/small/Main.fxml");
             AnchorPane smallScreen = FXMLLoader.load(smallUrl);
             
             BorderPane border = Main.getRoot();
@@ -43,7 +44,8 @@ public class MenuController implements Initializable {
 
     @FXML private void switchToLarge(ActionEvent event) {
         try {
-            URL largeUrl = getClass().getResource("/resources/view/Large.fxml");
+            URL largeUrl = getClass()
+                    .getResource("/resources/view/large/Main.fxml");
             AnchorPane largeScreen = FXMLLoader.load(largeUrl);
             
             BorderPane border = Main.getRoot();
