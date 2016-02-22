@@ -3,17 +3,14 @@ package model;
 import java.net.URL;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.MenuBar;
+import javafx.scene.control.ToolBar;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
-/**
- *
- * @author Lukas
- */
+
 public class Main extends Application {
     
     private static BorderPane root = new BorderPane();
@@ -25,8 +22,8 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         
-        URL menuBarUrl = getClass().getResource("/resources/view/MenuBar.fxml");
-        MenuBar bar = FXMLLoader.load(menuBarUrl);
+        URL toolBarUrl = getClass().getResource("/resources/view/Menu.fxml");
+        ToolBar bar = FXMLLoader.load(toolBarUrl);
         
         URL smallUrl = getClass().getResource("/resources/view/Small.fxml");
         AnchorPane smallScreen = FXMLLoader.load(smallUrl);
@@ -34,7 +31,7 @@ public class Main extends Application {
         root.setTop(bar);
         root.setCenter(smallScreen);
         
-        Scene scene = new Scene(root, 320, 480);
+        Scene scene = new Scene(root, 1124, 868);
         stage.setScene(scene);
         stage.show();
     }

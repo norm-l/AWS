@@ -12,7 +12,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.control.MenuItem;
+import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import model.Main;
@@ -24,8 +24,8 @@ import model.Main;
  */
 public class MenuController implements Initializable {
 
-    @FXML private MenuItem displayOne;
-    @FXML private MenuItem displayTwo;
+    @FXML private Button displayOne;
+    @FXML private Button displayTwo;
 
 
     @Override

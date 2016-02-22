@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<ToolBar xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="controllers.MenuController">
+  <items>
+    <Button fx:id="displayOne" 
+            mnemonicParsing="false" 
+            onAction="#switchToOne" 
+            prefWidth="60.0" 
+            text="Small" />
+      <Button fx:id="displayTwo" 
+              mnemonicParsing="false" 
+              onAction="#switchToTwo" 
+              prefWidth="60.0" 
+              text="Large" />
+  </items>
+</ToolBar>
