@@ -7,12 +7,18 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="320.0" styleClass="background" stylesheets="@../css/Main.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="480.0" prefWidth="320.0" styleClass="background" stylesheets="@../css/Main.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ScreenController">
     <children>
-        <Label layoutY="-2.0" text="Small">
-        </Label>
-      <Label layoutX="290.0" layoutY="465.0" text="Small" />
-      <Circle fill="DODGERBLUE" layoutX="164.0" layoutY="240.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" />
-      <Label layoutX="291.0" layoutY="-3.0" text="Small" />
+      <BorderPane prefHeight="480.0" prefWidth="320.0">
+         <top>
+            <Label text="Small" BorderPane.alignment="TOP_RIGHT" />
+         </top>
+         <bottom>
+            <Label text="Small" BorderPane.alignment="BOTTOM_LEFT" />
+         </bottom>
+         <center>
+            <Circle fill="DODGERBLUE" radius="100.0" stroke="BLACK" strokeType="INSIDE" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
     </children>
 </AnchorPane>
