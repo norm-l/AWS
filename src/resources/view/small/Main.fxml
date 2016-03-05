@@ -10,15 +10,27 @@
 <AnchorPane prefHeight="480.0" prefWidth="320.0" styleClass="background" stylesheets="@../../css/Main.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainController">
     <children>
       <BorderPane prefHeight="480.0" prefWidth="320.0">
-         <top>
-            <Label text="Small" BorderPane.alignment="TOP_RIGHT" />
-         </top>
-         <bottom>
-            <Label text="Small" BorderPane.alignment="BOTTOM_LEFT" />
-         </bottom>
          <center>
-            <Circle fill="DODGERBLUE" radius="100.0" stroke="BLACK" strokeType="INSIDE" BorderPane.alignment="CENTER" />
+            <GridPane prefHeight="446.0" prefWidth="168.0" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" prefWidth="54.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="200.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" prefWidth="54.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="149.0" minHeight="10.0" prefHeight="149.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="200.0" minHeight="10.0" prefHeight="200.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Circle fill="DODGERBLUE" radius="100.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Slider fx:id="timeSlider" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
          </center>
+         <bottom>
+            <Label fx:id="labelTest" alignment="CENTER" contentDisplay="CENTER" text="Label" BorderPane.alignment="CENTER" />
+         </bottom>
       </BorderPane>
     </children>
 </AnchorPane>
