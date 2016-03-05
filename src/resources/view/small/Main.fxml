@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.shape.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
@@ -23,14 +25,12 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Circle fill="DODGERBLUE" radius="100.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <Slider fx:id="timeSlider" blockIncrement="1.0" majorTickUnit="1.0" max="23.0" min="1.0" minorTickCount="0" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Circle fill="DODGERBLUE" radius="100.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" />
+                  <Slider fx:id="timeSlider" blockIncrement="1.0" majorTickUnit="1.0" max="23.0" min="1.0" minorTickCount="0" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label fx:id="labelTest" alignment="CENTER" contentDisplay="CENTER" text="1:00am" GridPane.rowIndex="1" />
                </children>
             </GridPane>
          </center>
-         <bottom>
-            <Label fx:id="labelTest" alignment="CENTER" contentDisplay="CENTER" text="1:00am" BorderPane.alignment="CENTER" />
-         </bottom>
          <top>
             <GridPane BorderPane.alignment="CENTER">
               <columnConstraints>
@@ -51,6 +51,112 @@
                </children>
             </GridPane>
          </top>
+         <bottom>
+            <ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="320.0" vbarPolicy="NEVER" BorderPane.alignment="CENTER">
+               <content>
+                  <HBox prefHeight="60.0" prefWidth="395.0">
+                     <children>
+                        <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="80.0">
+                           <children>
+                              <Label fx:id="day1" text="Day1">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </Label>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fx:id="day1Img" fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Label fx:id="day1Temp" text="Day1Temp" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="80.0">
+                           <children>
+                              <Label fx:id="day2" text="Day2">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </Label>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fx:id="day2Img" fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Label fx:id="day2Temp" text="Day2Temp" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="80.0">
+                           <children>
+                              <Label fx:id="day3" text="Day3">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </Label>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fx:id="day3Img" fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Label fx:id="day3Temp" text="Day3Temp" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="80.0">
+                           <children>
+                              <Label fx:id="day4" text="Day4">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </Label>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fx:id="day4Img" fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Label fx:id="day4Temp" text="Day4Temp" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="80.0">
+                           <children>
+                              <Label fx:id="day5" text="Day5">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </Label>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fx:id="day5Img" fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Label fx:id="day5Temp" text="Day5Temp" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="80.0">
+                           <children>
+                              <Label fx:id="day6" text="Day6">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </Label>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fx:id="day6Img" fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Label fx:id="day6Temp" text="Day6Temp" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                     </children>
+                  </HBox>
+               </content>
+            </ScrollPane>
+         </bottom>
       </BorderPane>
     </children>
 </AnchorPane>
