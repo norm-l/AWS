@@ -2,11 +2,8 @@ package API;
 
 import com.github.dvdme.ForecastIOLib.FIOHourly;
 import com.github.dvdme.ForecastIOLib.ForecastIO;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.TimeZone;
 
 public class WeatherAPI {
 
@@ -34,6 +31,7 @@ public class WeatherAPI {
             hourlyData.put("TempFeel", hourly.getHour(hour).apparentTemperature()); // Feel Temperature
             hourlyData.put("Humidity", hourly.getHour(hour).humidity()); // Humidity
             hourlyData.put("WindSpeed", hourly.getHour(hour).windSpeed()); // Wind Speed
+            hourlyData.put("Precip", hourly.getHour(hour).precipProbability()); // Precipitation
             hourlyData.put("TimeStamp", hourly.getHour(hour).time());// TimeStamp
         }
         return hourlyData;

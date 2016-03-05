@@ -25,7 +25,6 @@
                <children>
                   <Circle fill="DODGERBLUE" radius="100.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                   <Slider fx:id="timeSlider" blockIncrement="1.0" majorTickUnit="1.0" max="23.0" min="1.0" minorTickCount="0" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <Label fx:id="hourlyTimeCheck" prefHeight="93.0" prefWidth="231.0" text="TimeChecked" GridPane.columnIndex="1" />
                </children>
             </GridPane>
          </center>
@@ -48,6 +47,7 @@
                   <Label fx:id="hourlyFeelTemp" text="Feel Like" GridPane.columnIndex="1" />
                   <Label fx:id="hourlyHumidity" text="Humidity" GridPane.rowIndex="1" />
                   <Label fx:id="hourlyWindSpeed" text="WindSpeed" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label fx:id="hourlyPrecip" prefHeight="93.0" prefWidth="231.0" text="TimeChecked" GridPane.rowIndex="2" />
                </children>
             </GridPane>
          </top>

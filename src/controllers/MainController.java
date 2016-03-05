@@ -24,7 +24,9 @@ public class MainController implements Initializable {
     private Label hourlyHumidity;
     @FXML
     private Label hourlyWindSpeed;
-
+    @FXML
+    private Label hourlyPrecip;
+    
     private int currentTime;
     private WeatherAPI weatherAPI;
     private Map hourlyData;
@@ -50,31 +52,11 @@ public class MainController implements Initializable {
     }
 
     private void updateTime() {
-
-        switch (currentTime) {
-            case 1:
-                hourlyData = weatherAPI.HourlyReport(1);
-                setHourlyData();
-                break;
-            case 2:
-                weatherAPI.HourlyReport(2);
-                setHourlyData();
-                break;
-            case 3:
-                weatherAPI.HourlyReport(3);
-                setHourlyData();
-                break;
-            case 4:
-                weatherAPI.HourlyReport(4);
-                setHourlyData();
-                break;
-            case 5:
-                weatherAPI.HourlyReport(5);
-                setHourlyData();
-                break;
-            default:
-                System.out.println("Don't know");
-                break;
+        if(currentTime > 0 && currentTime < 25) {
+            hourlyData = weatherAPI.HourlyReport(currentTime);
+            setHourlyData();
+        } else {
+            System.out.println("Oops");
         }
     }
 
@@ -83,6 +65,7 @@ public class MainController implements Initializable {
         hourlyFeelTemp.setText("Feels Like: " + hourlyData.get("TempFeel").toString() + "c");
         hourlyHumidity.setText("Humidity: " + hourlyData.get("Humidity").toString());
         hourlyWindSpeed.setText("Wind Speed: " + hourlyData.get("WindSpeed").toString());
+        hourlyPrecip.setText("Precip: " + hourlyData.get("Precip").toString());
         labelTest.setText(hourlyData.get("TimeStamp").toString());
     }
 
