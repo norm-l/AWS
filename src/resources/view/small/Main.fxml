@@ -29,7 +29,7 @@
             </GridPane>
          </center>
          <bottom>
-            <Label fx:id="labelTest" alignment="CENTER" contentDisplay="CENTER" text="Label" BorderPane.alignment="CENTER" />
+            <Label fx:id="labelTest" alignment="CENTER" contentDisplay="CENTER" text="1:00am" BorderPane.alignment="CENTER" />
          </bottom>
       </BorderPane>
     </children>
