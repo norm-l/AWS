@@ -118,43 +118,65 @@ public class MainController implements Initializable {
         hourlyWindSpeed.setText(hourlyData.get("WindSpeed").toString());
         hourlyPrecip.setText(hourlyData.get("Precip").toString());
         timeCheck.setText(hourlyData.get("TimeStamp").toString());
-        artInt.setText(hourlyData.get("Summary").toString());
+        
+        String text;
         
         switch (hourlyData.get("Icon").toString()) {
             case "\"clear-day\"":
                 iconImg.setImage(CLEAR_DAY);
+                text = "Alice: It's a clear day at this time!\n"
+                        + " enjoy the weather while you can! :)";
                 break;
             case "\"clear-night\"":
                 iconImg.setImage(CLEAR_NIGHT);
+                text = "Alice: It's going to be a clear night!\n"
+                        + " You'll be getting a peaceful nights rest tonight."; 
                 break;
             case "\"rain\"":
                 iconImg.setImage(RAIN);
+                text = "Alice: You may want to bring an umbrella\n"
+                        + " if you're going out! It's going to be raining."; 
                 break;
             case "\"snow\"":
                 iconImg.setImage(SNOW);
+                text = "Alice: Hope you like snow as some will be falling\n"
+                        + " at this time!"; 
                 break;
             case "\"sleet\"":
                 iconImg.setImage(SLEET);
+                text = "Alice: It's going to be raining... \n"
+                        + "and snowing at the same time!"; 
                 break;
             case "\"wind\"":
                 iconImg.setImage(WIND);
+                text = "Alice: Hope you ate today as it's windy today..\n"
+                        + " Don't want to be blown away!"; 
                 break;
             case "\"fog\"":
                 iconImg.setImage(FOG);
+                text = "Alice: Your glasses won't help at this time\n"
+                        + " because it's foggy!"; 
                 break;
             case "\"cloudy\"":
                 iconImg.setImage(CLOUDY);
+                text = "Alice: I don't think you'll see much in the sky right now\n"
+                        + " it's cloudy!"; 
                 break;
             case "\"partly-cloudy-day\"":
                 iconImg.setImage(PARTLY_CLOUDY_DAY);
+                text = "Alice: A little cloudy right now!"; 
                 break;
             case "\"partly-cloudy-night\"":
                 iconImg.setImage(PARTLY_CLOUDY_NIGHT);
+                text = "Alice: A cloudy night, can you see the moon?"; 
                 break;
             default:
                 iconImg.setImage(UNKNOWN);
+                text = "Alice: I don't seem to have any data! Sorry!"; 
                 break;
         }
+        
+        artInt.setText(text);
         
     }
     
