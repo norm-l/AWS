@@ -7,7 +7,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.input.MouseEvent;
-import model.api.WeatherAPI;
 import model.city.City;
 import model.city.CityList;
 

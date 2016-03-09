@@ -98,9 +98,11 @@ public class MainController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // Default location
-        //setCity("London", "51.5072", "0.1275");
+        setCity("London", "51.5072", "0.1275");
         
-        currCity = SettingsController.getCity();
+        //currCity = SettingsController.getCity();
+        //currLat = SettingsController.getLat();
+        //currLon = SettingsController.getLon();
         
         timeSlider.valueProperty().addListener((obs, oldValue, newValue) -> {
             if (timeSlider.isValueChanging()) {
