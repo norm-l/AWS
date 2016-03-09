@@ -2,12 +2,12 @@ package controllers;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.input.MouseEvent;
+import model.api.WeatherAPI;
 import model.city.City;
 import model.city.CityList;
 
@@ -35,7 +35,7 @@ public class SettingsController implements Initializable {
             if (event.getClickCount() == 2) {
                 City selected = cityView.getSelectionModel().getSelectedItem();
                 System.out.println("clicked on " + cityView.getSelectionModel().getSelectedItem());
-                MainController.setCity(selected.cityNameProperty().toString(),
+                setCity(selected.cityNameProperty().toString(),
                         selected.cityLatProperty().toString(),
                         selected.cityLonProperty().toString());
             }
