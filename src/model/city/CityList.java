@@ -1,5 +1,5 @@
 
-package model;
+package model.city;
 
 import javafx.beans.Observable;
 import javafx.collections.FXCollections;
@@ -21,12 +21,17 @@ public class CityList {
     public void loadCities() {
         ObservableList<City> data = FXCollections.observableArrayList();
         
-        City Paris = new City("Paris", "0", "0"); // City Name, Latitude, Longitude
+        City London = new City("London", "51.5072", "0.1275");
+        data.add(London);
+        
+        City Paris = new City("Paris", "48.8567", "2.3508"); // City Name, Latitude, Longitude
         data.add(Paris); // Add to data
         
-        City Warsaw = new City("Warsaw", "0", "0");
-        data.add(Warsaw);
+        //City Warsaw = new City("Warsaw", "0", "0");
+        //data.add(Warsaw);
         
         //.. and so on..
+        
+        cityList.setAll(data);
     }
 }

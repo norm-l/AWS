@@ -1,4 +1,4 @@
-package API;
+package model.api;
 
 import com.github.dvdme.ForecastIOLib.FIOHourly;
 import com.github.dvdme.ForecastIOLib.ForecastIO;

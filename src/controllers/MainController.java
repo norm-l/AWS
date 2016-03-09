@@ -1,6 +1,6 @@
 package controllers;
 
-import API.WeatherAPI;
+import model.api.WeatherAPI;
 
 import java.net.URL;
 import java.util.Map;
