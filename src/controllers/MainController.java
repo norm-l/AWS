@@ -35,6 +35,14 @@ public class MainController implements Initializable {
     @FXML
     private Label cityLbl;
     
+    @FXML
+    private ImageView tempView;
+    
+    @FXML
+    private ImageView windView;
+    
+    @FXML private ImageView humView;
+    
     @FXML private Label day1;
     @FXML private Label day1Temp;
     @FXML private ImageView day1Img;
@@ -84,6 +92,14 @@ public class MainController implements Initializable {
     private final Image UNKNOWN = new Image(
             getClass().getClassLoader().getResourceAsStream("resources/images/icons/na.png"));
     
+    private final Image TEMPIMG = new Image(
+            getClass().getClassLoader().getResourceAsStream("resources/images/temperature.png"));
+    private final Image WINDIMG = new Image(
+            getClass().getClassLoader().getResourceAsStream("resources/images/wind.png"));
+    private final Image HUMIMG = new Image(
+            getClass().getClassLoader().getResourceAsStream("resources/images/humidity.png"));
+    
+    
     private final String KEY = "342c4be47e8f894c2e0f514f31d93dae";
     
     private int currentTime;
@@ -110,6 +126,11 @@ public class MainController implements Initializable {
                 updateTime();
             }
         });
+        
+        tempView.setImage(TEMPIMG);
+        windView.setImage(WINDIMG);
+        humView.setImage(HUMIMG);
+        
     }
 
     private void updateTime() {
