@@ -91,10 +91,16 @@ public class MainController implements Initializable {
     private Map hourlyData;
     private Map dailyData;
 
+    private String currCity;
+    private String currLat;
+    private String currLon;
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // Default location
-        setCity("London", "51.5072", "0.1275");
+        //setCity("London", "51.5072", "0.1275");
+        
+        currCity = SettingsController.getCity();
         
         timeSlider.valueProperty().addListener((obs, oldValue, newValue) -> {
             if (timeSlider.isValueChanging()) {
