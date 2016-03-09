@@ -1,12 +1,14 @@
 package API;
 
-import com.github.dvdme.ForecastIOLib.FIOAlerts;
-import com.github.dvdme.ForecastIOLib.FIODaily;
 import com.github.dvdme.ForecastIOLib.FIOHourly;
 import com.github.dvdme.ForecastIOLib.ForecastIO;
-import java.util.ArrayList;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class WeatherAPI {
 
@@ -15,11 +17,11 @@ public class WeatherAPI {
     Map hourlyData = new HashMap();
     Map dailyData = new HashMap();
 
-    public WeatherAPI(String APIKey) {
+    public WeatherAPI(String APIKey, String Latitude, String Longitude) {
         fio = new ForecastIO(APIKey);
         fio.setUnits(ForecastIO.UNITS_UK);
         fio.setLang(ForecastIO.LANG_ENGLISH);
-        fio.getForecast("51.5072", "0.1275");
+        fio.getForecast(Latitude, Longitude);
         System.out.println("Timezone: " + fio.getTimezone());
     }
 
@@ -29,34 +31,60 @@ public class WeatherAPI {
         if (hourly.hours() < 0) {
             System.out.println("No hourly data.");
         } else {
-            hourlyData.put("Temp", hourly.getHour(hour).temperature()); // Temperature
-            hourlyData.put("TempFeel", hourly.getHour(hour).apparentTemperature()); // Feel Temperature
-            hourlyData.put("Humidity", hourly.getHour(hour).humidity()); // Humidity
-            hourlyData.put("WindSpeed", hourly.getHour(hour).windSpeed()); // Wind Speed
-            hourlyData.put("Precip", hourly.getHour(hour).precipProbability()); // Precipitation
-            hourlyData.put("TimeStamp", hourly.getHour(hour).time());// TimeStamp
-            hourlyData.put("Summary", hourly.getHour(hour).summary()); // Summary
+            String temp = formatDouble(hourly.getHour(hour).temperature());
+            String tempFeel = formatDouble(hourly.getHour(hour).apparentTemperature());
+            String windspeed = formatDouble(hourly.getHour(hour).windSpeed());
+            String humidity = formatPercentage(hourly.getHour(hour).humidity());
+            String precip = formatPercentage(hourly.getHour(hour).precipProbability());
+            String time = formatTime(hourly.getHour(hour).time());
+
+            hourlyData.put("Temp", temp); // Temperature
+            hourlyData.put("TempFeel", tempFeel); // Feel Temperature
+            hourlyData.put("Humidity", humidity); // Humidity
+            hourlyData.put("WindSpeed", windspeed); // Wind Speed
+            hourlyData.put("Precip", precip); // Precipitation
+            hourlyData.put("TimeStamp", time);// TimeStamp
             hourlyData.put("Icon", hourly.getHour(hour).icon());
         }
         return hourlyData;
     }
-
-    public Map dailyReport(int day) {
-        FIODaily daily = new FIODaily(fio);
-        //In case there is no daily data available
-        if (daily.days() < 0) {
-            System.out.println("No daily data.");
-        } else {
-            System.out.println("Data for day " + day);
-            Double temp1 = daily.getDay(day).temperatureMax();
-            System.out.println(temp1);
-            Double temp2 = daily.getDay(day).temperatureMin();
-            System.out.println(temp2);
-            Double result = temp1 + temp2;
-            dailyData.put("Temp", result); // Temperature
-            dailyData.put("Icon", daily.getDay(day).icon()); // Icon
-        }
-        return dailyData;
+    
+    private String formatDouble(double data) { 
+        return String.format("%.0f", data);
     }
+    
+    private String formatPercentage(double data) {
+        return String.format("%2d", (int) (data * 100));
+    }
+    
+    private String formatTime(String data) {
+        Date date = null;
+        try {
+            date = new SimpleDateFormat("d-MM-yyyy HH:mm:ss").parse(data);
+        } catch (ParseException ex) {
+            Logger.getLogger(WeatherAPI.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        String oldStr = new SimpleDateFormat("EEEE HH:mma").format(date);
+        String str = oldStr.replace("AM", "am").replace("PM","pm");
+        return str;
+    }
+
+//    public Map dailyReport(int day) {
+//        FIODaily daily = new FIODaily(fio);
+//        //In case there is no daily data available
+//        if (daily.days() < 0) {
+//            System.out.println("No daily data.");
+//        } else {
+//            System.out.println("Data for day " + day);
+//            Double temp1 = daily.getDay(day).temperatureMax();
+//            System.out.println(temp1);
+//            Double temp2 = daily.getDay(day).temperatureMin();
+//            System.out.println(temp2);
+//            Double result = temp1 + temp2;
+//            dailyData.put("Temp", result); // Temperature
+//            dailyData.put("Icon", daily.getDay(day).icon()); // Icon
+//        }
+//        return dailyData;
+//    }
 
 }

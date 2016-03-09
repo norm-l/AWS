@@ -3,7 +3,6 @@ package controllers;
 import API.WeatherAPI;
 
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.Map;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
@@ -32,6 +31,9 @@ public class MainController implements Initializable {
     
     @FXML
     private Label artInt;
+    
+    @FXML
+    private Label cityLbl;
     
     @FXML private Label day1;
     @FXML private Label day1Temp;
@@ -82,17 +84,17 @@ public class MainController implements Initializable {
     private final Image UNKNOWN = new Image(
             getClass().getClassLoader().getResourceAsStream("resources/images/icons/na.png"));
     
+    private final String KEY = "342c4be47e8f894c2e0f514f31d93dae";
+    
     private int currentTime;
     private WeatherAPI weatherAPI;
     private Map hourlyData;
     private Map dailyData;
-    private ArrayList<String> alertData;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-
-        weatherAPI = new WeatherAPI("342c4be47e8f894c2e0f514f31d93dae");
-        setDailyData();
+        // Default location
+        setCity("London", "51.5072", "0.1275");
         
         timeSlider.valueProperty().addListener((obs, oldValue, newValue) -> {
             if (timeSlider.isValueChanging()) {
@@ -110,13 +112,18 @@ public class MainController implements Initializable {
             System.out.println("Error!");
         }
     }
+    
+    public void setCity(String city, String lat, String lon) {
+        cityLbl.setText(city);
+        weatherAPI = new WeatherAPI(KEY, lat, lon);
+    }
 
     private void setHourlyData() {
-        hourlyTemp.setText(hourlyData.get("Temp").toString() + "c");
-        hourlyFeelTemp.setText(hourlyData.get("TempFeel").toString() + "c");
-        hourlyHumidity.setText(hourlyData.get("Humidity").toString());
-        hourlyWindSpeed.setText(hourlyData.get("WindSpeed").toString());
-        hourlyPrecip.setText(hourlyData.get("Precip").toString());
+        hourlyTemp.setText(hourlyData.get("Temp") + "°C");
+        hourlyFeelTemp.setText(hourlyData.get("TempFeel") + "°C");
+        hourlyHumidity.setText(hourlyData.get("Humidity") + "%");
+        hourlyWindSpeed.setText(hourlyData.get("WindSpeed") + " mph");
+        hourlyPrecip.setText(hourlyData.get("Precip") + "%");
         timeCheck.setText(hourlyData.get("TimeStamp").toString());
         
         String text;
@@ -159,8 +166,8 @@ public class MainController implements Initializable {
                 break;
             case "\"cloudy\"":
                 iconImg.setImage(CLOUDY);
-                text = "Alice: I don't think you'll see much in the sky right now\n"
-                        + " it's cloudy!"; 
+                text = "Alice: I don't think you'll see much in the sky\n"
+                        + " right now because it's cloudy!"; 
                 break;
             case "\"partly-cloudy-day\"":
                 iconImg.setImage(PARTLY_CLOUDY_DAY);
