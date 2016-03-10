@@ -10,28 +10,29 @@
 <?import javafx.scene.layout.*?>
 
 <AnchorPane id="AnchorPane" prefHeight="480.0" prefWidth="320.0" styleClass="mainFxmlClass" stylesheets="@../../css/small/start.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.StartController">
-   <children>
-      <ImageView fitHeight="480.0" fitWidth="320.0">
-         <image>
-            <Image url="@../../images/backgrounds/small/start.png" />
-         </image>
-      </ImageView>
-      <BorderPane prefHeight="480.0" prefWidth="320.0">
-         <center>
-            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
-               <children>
-                  <Label maxWidth="-Infinity" minHeight="-Infinity" prefWidth="200.0" text="Name" />
-                  <TextField fx:id="nameField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="200.0" />
-                  <Button fx:id="switchBtn" mnemonicParsing="false" onAction="#switchToMain" text="&gt;&gt;" />
-               </children>
-            </VBox>
-         </center>
-         <bottom>
-            <Label fx:id="aiLabel" alignment="CENTER" contentDisplay="CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="81.0" prefWidth="263.0" text="Test" textFill="#eeeeee" BorderPane.alignment="CENTER">
-               <font>
-                  <Font name="Corbel Bold" size="12.0" />
-               </font></Label>
-         </bottom>
-      </BorderPane>
-   </children>
+    <children>
+        <ImageView fitHeight="480.0" fitWidth="320.0">
+            <image>
+                <Image url="@../../images/backgrounds/small/start.png" />
+            </image>
+        </ImageView>
+        <BorderPane prefHeight="480.0" prefWidth="320.0">
+            <center>
+                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label maxWidth="-Infinity" minHeight="-Infinity" prefWidth="200.0" text="Name" />
+                        <TextField fx:id="nameField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="200.0" />
+                        <Button fx:id="switchBtn" mnemonicParsing="false" onAction="#switchToMain" text="&gt;&gt;" />
+                    </children>
+                </VBox>
+            </center>
+            <bottom>
+                <Label fx:id="aiLabel" alignment="CENTER" contentDisplay="CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="81.0" prefWidth="263.0" text="Test" textFill="#eeeeee" BorderPane.alignment="CENTER">
+                    <font>
+                        <Font name="Corbel Bold" size="12.0" />
+                    </font>
+                </Label>
+            </bottom>
+        </BorderPane>
+    </children>
 </AnchorPane>

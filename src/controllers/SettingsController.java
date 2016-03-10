@@ -16,17 +16,16 @@ public class SettingsController implements Initializable {
     private ListView<City> cityView;
 
     private CityList cityList;
-    
+
     private String currCity;
     private String currLat;
     private String currLon;
-    
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         CityList model = new CityList();
         initData(model);
-        
+
         setCity("London", "51.5072", "0.1275");
 
         cityView.setCellFactory(lv -> new ListCell<City>() {
@@ -48,21 +47,21 @@ public class SettingsController implements Initializable {
         });
 
     }
-    
+
     private void setCity(String city, String lat, String lon) {
         currCity = city;
         currLat = lat;
         currLon = lon;
     }
-    
+
     public String getCity() {
         return currCity;
     }
-    
+
     public String getLat() {
         return currLat;
     }
-    
+
     public String getLon() {
         return currLon;
     }

@@ -48,15 +48,15 @@ public class WeatherAPI {
         }
         return hourlyData;
     }
-    
-    private String formatDouble(double data) { 
+
+    private String formatDouble(double data) {
         return String.format("%.0f", data);
     }
-    
+
     private String formatPercentage(double data) {
         return String.format("%2d", (int) (data * 100));
     }
-    
+
     private String formatTime(String data) {
         Date date = null;
         try {
@@ -65,26 +65,7 @@ public class WeatherAPI {
             Logger.getLogger(WeatherAPI.class.getName()).log(Level.SEVERE, null, ex);
         }
         String oldStr = new SimpleDateFormat("EEEE HH:mma").format(date);
-        String str = oldStr.replace("AM", "am").replace("PM","pm");
+        String str = oldStr.replace("AM", "am").replace("PM", "pm");
         return str;
     }
-
-//    public Map dailyReport(int day) {
-//        FIODaily daily = new FIODaily(fio);
-//        //In case there is no daily data available
-//        if (daily.days() < 0) {
-//            System.out.println("No daily data.");
-//        } else {
-//            System.out.println("Data for day " + day);
-//            Double temp1 = daily.getDay(day).temperatureMax();
-//            System.out.println(temp1);
-//            Double temp2 = daily.getDay(day).temperatureMin();
-//            System.out.println(temp2);
-//            Double result = temp1 + temp2;
-//            dailyData.put("Temp", result); // Temperature
-//            dailyData.put("Icon", daily.getDay(day).icon()); // Icon
-//        }
-//        return dailyData;
-//    }
-
 }

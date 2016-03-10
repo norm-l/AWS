@@ -12,270 +12,276 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1024.0" styleClass="background" stylesheets="@../../css/large/Main.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainController">
     <children>
-      <ImageView fitHeight="720.0" fitWidth="1025.0">
-         <image>
-            <Image url="@../../images/backgrounds/large/main.png" />
-         </image>
-      </ImageView>
-      <Pane prefHeight="720.0" prefWidth="1024.0">
-         <children>
-            <Label layoutX="575.0" layoutY="407.0" text="RealFeel™" textAlignment="CENTER" textFill="#00000071" />
-            <Label fx:id="cityLbl" alignment="CENTER" contentDisplay="CENTER" layoutX="273.0" layoutY="30.0" prefHeight="48.0" prefWidth="459.0" text="London" textAlignment="CENTER">
-               <font>
-                  <Font size="25.0" />
-               </font></Label>
-            <Label fx:id="hourlyTemp" alignment="CENTER" contentDisplay="CENTER" layoutX="387.0" layoutY="426.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="45.0">
-               <font>
-                  <Font size="14.0" />
-               </font></Label>
-            <Label fx:id="hourlyFeelTemp" alignment="CENTER" contentDisplay="CENTER" layoutX="579.0" layoutY="427.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="45.0">
-               <font>
-                  <Font size="14.0" />
-               </font></Label>
-            <Label fx:id="hourlyHumidity" layoutX="591.0" layoutY="223.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="45.0">
-               <font>
-                  <Font size="14.0" />
-               </font></Label>
-            <Label fx:id="hourlyWindSpeed" layoutX="375.0" layoutY="223.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="70.0">
-               <font>
-                  <Font size="14.0" />
-               </font></Label>
-            <Label fx:id="timeCheck" alignment="CENTER" contentDisplay="CENTER" layoutX="346.0" layoutY="69.0" prefHeight="17.0" prefWidth="313.0" textAlignment="CENTER" />
-            <ImageView fx:id="tempView" fitHeight="30.0" fitWidth="30.0" layoutX="488.0" layoutY="412.0" opacity="0.7" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="windView" fitHeight="30.0" fitWidth="30.0" layoutX="339.0" layoutY="208.0" opacity="0.7" pickOnBounds="true" preserveRatio="true" />
-            <Label fx:id="hourlyPrecip" layoutX="593.0" layoutY="307.0" prefHeight="17.0" prefWidth="40.0">
-               <font>
-                  <Font size="14.0" />
-               </font></Label>
-            <ImageView fx:id="iconImg" fitHeight="100.0" fitWidth="100.0" layoutX="452.0" layoutY="257.0" pickOnBounds="true" preserveRatio="true" />
-            <Label layoutX="376.0" layoutY="406.0" text="Temperature" textAlignment="CENTER" textFill="#00000071" />
-            <ImageView fx:id="humView" fitHeight="30.0" fitWidth="30.0" layoutX="545.0" layoutY="208.0" opacity="0.7" pickOnBounds="true" preserveRatio="true" />
-            <Label layoutX="585.0" layoutY="286.0" text="Perception" textAlignment="CENTER" textFill="#00000071" />
-            <Label layoutX="589.0" layoutY="206.0" text="Humidity" textAlignment="CENTER" textFill="#00000071" />
-            <Label layoutX="378.0" layoutY="206.0" text="Wind Speed" textAlignment="CENTER" textFill="#00000071" />
-            <ScrollPane layoutX="-1.0" layoutY="660.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.7" prefHeight="60.0" prefWidth="1025.0" vbarPolicy="NEVER">
-               <content>
-                  <HBox prefHeight="60.0" prefWidth="1114.0">
-                     <children>
-                        <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="80.0">
-                           <children>
-                              <Label fx:id="day1" text="Monday">
-                                 <VBox.margin>
-                                    <Insets />
-                                 </VBox.margin>
-                              </Label>
-                              <HBox prefHeight="100.0" prefWidth="200.0">
-                                 <children>
-                                    <ImageView fx:id="day1Img" fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
-                                    <Label fx:id="day1Temp" text="9°C" />
-                                 </children>
-                              </HBox>
-                           </children>
-                        </VBox>
-                        <Separator orientation="VERTICAL" prefHeight="200.0" />
-                        <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="80.0">
-                           <children>
-                              <Label fx:id="day2" text="Tuesday">
-                                 <VBox.margin>
-                                    <Insets />
-                                 </VBox.margin>
-                              </Label>
-                              <HBox prefHeight="100.0" prefWidth="200.0">
-                                 <children>
-                                    <ImageView fx:id="day2Img" fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
-                                    <Label fx:id="day2Temp" text="10°C" />
-                                 </children>
-                              </HBox>
-                           </children>
-                        </VBox>
-                        <Separator orientation="VERTICAL" prefHeight="200.0" />
-                        <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="80.0">
-                           <children>
-                              <Label fx:id="day3" text="Wednesday">
-                                 <VBox.margin>
-                                    <Insets />
-                                 </VBox.margin>
-                              </Label>
-                              <HBox prefHeight="100.0" prefWidth="200.0">
-                                 <children>
-                                    <ImageView fx:id="day3Img" fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
-                                    <Label fx:id="day3Temp" text="11°C" />
-                                 </children>
-                              </HBox>
-                           </children>
-                        </VBox>
-                        <Separator orientation="VERTICAL" prefHeight="200.0" />
-                        <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="80.0">
-                           <children>
-                              <Label fx:id="day4" text="Thursday">
-                                 <VBox.margin>
-                                    <Insets />
-                                 </VBox.margin>
-                              </Label>
-                              <HBox prefHeight="100.0" prefWidth="200.0">
-                                 <children>
-                                    <ImageView fx:id="day4Img" fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
-                                    <Label fx:id="day4Temp" text="5°C" />
-                                 </children>
-                              </HBox>
-                           </children>
-                        </VBox>
-                        <Separator orientation="VERTICAL" prefHeight="200.0" />
-                        <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="80.0">
-                           <children>
-                              <Label fx:id="day5" text="Friday">
-                                 <VBox.margin>
-                                    <Insets />
-                                 </VBox.margin>
-                              </Label>
-                              <HBox prefHeight="100.0" prefWidth="200.0">
-                                 <children>
-                                    <ImageView fx:id="day5Img" fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
-                                    <Label fx:id="day5Temp" text="8°C" />
-                                 </children>
-                              </HBox>
-                           </children>
-                        </VBox>
-                        <Separator orientation="VERTICAL" prefHeight="200.0" />
-                        <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="80.0">
-                           <children>
-                              <Label fx:id="day6" text="Saturday">
-                                 <VBox.margin>
-                                    <Insets />
-                                 </VBox.margin>
-                              </Label>
-                              <HBox prefHeight="100.0" prefWidth="200.0">
-                                 <children>
-                                    <ImageView fx:id="day6Img" fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
-                                    <Label fx:id="day6Temp" text="11°C" />
-                                 </children>
-                              </HBox>
-                           </children>
-                        </VBox>
-                        <Separator orientation="VERTICAL" prefHeight="200.0" />
-                        <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="80.0">
-                           <children>
-                              <Label fx:id="day51" text="Sunday">
-                                 <VBox.margin>
-                                    <Insets />
-                                 </VBox.margin>
-                              </Label>
-                              <HBox prefHeight="100.0" prefWidth="200.0">
-                                 <children>
-                                    <ImageView fx:id="day7Img" fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
-                                    <Label fx:id="day5Temp1" text="10°C" />
-                                 </children>
-                              </HBox>
-                           </children>
-                        </VBox>
-                        <Separator orientation="VERTICAL" prefHeight="200.0" />
-                        <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="80.0">
-                           <children>
-                              <Label fx:id="day61" text="Monday">
-                                 <VBox.margin>
-                                    <Insets />
-                                 </VBox.margin>
-                              </Label>
-                              <HBox prefHeight="100.0" prefWidth="200.0">
-                                 <children>
-                                    <ImageView fx:id="day8Img" fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
-                                    <Label fx:id="day6Temp1" text="13°C" />
-                                 </children>
-                              </HBox>
-                           </children>
-                        </VBox>
-                        <Separator layoutX="600.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" />
-                        <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="80.0">
-                           <children>
-                              <Label fx:id="day62" text="Tuesday">
-                                 <VBox.margin>
-                                    <Insets />
-                                 </VBox.margin>
-                              </Label>
-                              <HBox prefHeight="100.0" prefWidth="200.0">
-                                 <children>
-                                    <ImageView fx:id="day9Img" fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
-                                    <Label fx:id="day6Temp2" text="6°C" />
-                                 </children>
-                              </HBox>
-                           </children>
-                        </VBox>
-                        <Separator layoutX="686.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" />
-                        <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="80.0">
-                           <children>
-                              <Label fx:id="day63" text="Wednesday">
-                                 <VBox.margin>
-                                    <Insets />
-                                 </VBox.margin>
-                              </Label>
-                              <HBox prefHeight="100.0" prefWidth="200.0">
-                                 <children>
-                                    <ImageView fx:id="day10Img" fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
-                                    <Label fx:id="day6Temp3" text="5°C" />
-                                 </children>
-                              </HBox>
-                           </children>
-                        </VBox>
-                        <Separator layoutX="772.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" />
-                        <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="80.0">
-                           <children>
-                              <Label fx:id="day64" text="Thursday">
-                                 <VBox.margin>
-                                    <Insets />
-                                 </VBox.margin>
-                              </Label>
-                              <HBox prefHeight="100.0" prefWidth="200.0">
-                                 <children>
-                                    <ImageView fx:id="day11Img" fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
-                                    <Label fx:id="day6Temp4" text="12°C" />
-                                 </children>
-                              </HBox>
-                           </children>
-                        </VBox>
-                        <Separator layoutX="858.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" />
-                        <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="80.0">
-                           <children>
-                              <Label fx:id="day65" text="Friday">
-                                 <VBox.margin>
-                                    <Insets />
-                                 </VBox.margin>
-                              </Label>
-                              <HBox prefHeight="100.0" prefWidth="200.0">
-                                 <children>
-                                    <ImageView fx:id="day12Img" fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
-                                    <Label fx:id="day6Temp5" text="11°C" />
-                                 </children>
-                              </HBox>
-                           </children>
-                        </VBox>
-                        <Separator layoutX="944.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" />
-                        <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="80.0">
-                           <children>
-                              <Label fx:id="day66" text="Monday">
-                                 <VBox.margin>
-                                    <Insets />
-                                 </VBox.margin>
-                              </Label>
-                              <HBox prefHeight="100.0" prefWidth="200.0">
-                                 <children>
-                                    <ImageView fx:id="day13Img" fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
-                                    <Label fx:id="day6Temp6" text="6°C" />
-                                 </children>
-                              </HBox>
-                           </children>
-                        </VBox>
-                     </children>
-                  </HBox>
-               </content>
-            </ScrollPane>
-            <Circle fill="#1f93ff00" layoutX="503.0" layoutY="327.0" radius="212.0" stroke="#52cbfc" strokeType="INSIDE" strokeWidth="4.0" />
-            <Label fx:id="artInt" alignment="CENTER" contentDisplay="CENTER" layoutX="181.0" layoutY="569.0" prefHeight="85.0" prefWidth="642.0" text="Alice: Scroll the bar to get details!" textAlignment="CENTER" textFill="#eeeeee">
-               <font>
-                  <Font name="Corbel Bold" size="14.0" />
-               </font>
-            </Label>
-            <Slider fx:id="timeSlider" blockIncrement="1.0" layoutX="112.0" layoutY="542.0" majorTickUnit="1.0" max="23.0" maxHeight="-Infinity" maxWidth="-Infinity" min="1.0" minHeight="-Infinity" minWidth="-Infinity" minorTickCount="0" prefHeight="40.0" prefWidth="782.0" showTickMarks="true" snapToTicks="true" />
-         </children>
-      </Pane>
+        <ImageView fitHeight="720.0" fitWidth="1025.0">
+            <image>
+                <Image url="@../../images/backgrounds/large/main.png" />
+            </image>
+        </ImageView>
+        <Pane prefHeight="720.0" prefWidth="1024.0">
+            <children>
+                <Label layoutX="575.0" layoutY="407.0" text="RealFeel™" textAlignment="CENTER" textFill="#00000071" />
+                <Label fx:id="cityLbl" alignment="CENTER" contentDisplay="CENTER" layoutX="273.0" layoutY="30.0" prefHeight="48.0" prefWidth="459.0" text="London" textAlignment="CENTER">
+                    <font>
+                        <Font size="25.0" />
+                    </font>
+                </Label>
+                <Label fx:id="hourlyTemp" alignment="CENTER" contentDisplay="CENTER" layoutX="387.0" layoutY="426.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="45.0">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="hourlyFeelTemp" alignment="CENTER" contentDisplay="CENTER" layoutX="579.0" layoutY="427.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="45.0">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="hourlyHumidity" layoutX="591.0" layoutY="223.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="45.0">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="hourlyWindSpeed" layoutX="375.0" layoutY="223.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="70.0">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="timeCheck" alignment="CENTER" contentDisplay="CENTER" layoutX="346.0" layoutY="69.0" prefHeight="17.0" prefWidth="313.0" textAlignment="CENTER" />
+                <ImageView fx:id="tempView" fitHeight="30.0" fitWidth="30.0" layoutX="488.0" layoutY="412.0" opacity="0.7" pickOnBounds="true" preserveRatio="true" />
+                <ImageView fx:id="windView" fitHeight="30.0" fitWidth="30.0" layoutX="339.0" layoutY="208.0" opacity="0.7" pickOnBounds="true" preserveRatio="true" />
+                <Label fx:id="hourlyPrecip" layoutX="593.0" layoutY="307.0" prefHeight="17.0" prefWidth="40.0">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <ImageView fx:id="iconImg" fitHeight="100.0" fitWidth="100.0" layoutX="452.0" layoutY="257.0" pickOnBounds="true" preserveRatio="true" />
+                <Label layoutX="376.0" layoutY="406.0" text="Temperature" textAlignment="CENTER" textFill="#00000071" />
+                <ImageView fx:id="humView" fitHeight="30.0" fitWidth="30.0" layoutX="545.0" layoutY="208.0" opacity="0.7" pickOnBounds="true" preserveRatio="true" />
+                <Label layoutX="585.0" layoutY="286.0" text="Perception" textAlignment="CENTER" textFill="#00000071" />
+                <Label layoutX="589.0" layoutY="206.0" text="Humidity" textAlignment="CENTER" textFill="#00000071" />
+                <Label layoutX="378.0" layoutY="206.0" text="Wind Speed" textAlignment="CENTER" textFill="#00000071" />
+                <ScrollPane layoutX="-1.0" layoutY="660.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.7" prefHeight="60.0" prefWidth="1025.0" vbarPolicy="NEVER">
+                    <content>
+                        <HBox prefHeight="60.0" prefWidth="1114.0">
+                            <children>
+                                <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="80.0">
+                                    <children>
+                                        <Label fx:id="day1" text="Monday">
+                                            <VBox.margin>
+                                                <Insets />
+                                            </VBox.margin>
+                                        </Label>
+                                        <HBox prefHeight="100.0" prefWidth="200.0">
+                                            <children>
+                                                <ImageView fx:id="day1Img" fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+                                                <Label fx:id="day1Temp" text="9°C" />
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </VBox>
+                                <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="80.0">
+                                    <children>
+                                        <Label fx:id="day2" text="Tuesday">
+                                            <VBox.margin>
+                                                <Insets />
+                                            </VBox.margin>
+                                        </Label>
+                                        <HBox prefHeight="100.0" prefWidth="200.0">
+                                            <children>
+                                                <ImageView fx:id="day2Img" fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+                                                <Label fx:id="day2Temp" text="10°C" />
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </VBox>
+                                <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="80.0">
+                                    <children>
+                                        <Label fx:id="day3" text="Wednesday">
+                                            <VBox.margin>
+                                                <Insets />
+                                            </VBox.margin>
+                                        </Label>
+                                        <HBox prefHeight="100.0" prefWidth="200.0">
+                                            <children>
+                                                <ImageView fx:id="day3Img" fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+                                                <Label fx:id="day3Temp" text="11°C" />
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </VBox>
+                                <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="80.0">
+                                    <children>
+                                        <Label fx:id="day4" text="Thursday">
+                                            <VBox.margin>
+                                                <Insets />
+                                            </VBox.margin>
+                                        </Label>
+                                        <HBox prefHeight="100.0" prefWidth="200.0">
+                                            <children>
+                                                <ImageView fx:id="day4Img" fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+                                                <Label fx:id="day4Temp" text="5°C" />
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </VBox>
+                                <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="80.0">
+                                    <children>
+                                        <Label fx:id="day5" text="Friday">
+                                            <VBox.margin>
+                                                <Insets />
+                                            </VBox.margin>
+                                        </Label>
+                                        <HBox prefHeight="100.0" prefWidth="200.0">
+                                            <children>
+                                                <ImageView fx:id="day5Img" fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+                                                <Label fx:id="day5Temp" text="8°C" />
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </VBox>
+                                <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="80.0">
+                                    <children>
+                                        <Label fx:id="day6" text="Saturday">
+                                            <VBox.margin>
+                                                <Insets />
+                                            </VBox.margin>
+                                        </Label>
+                                        <HBox prefHeight="100.0" prefWidth="200.0">
+                                            <children>
+                                                <ImageView fx:id="day6Img" fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+                                                <Label fx:id="day6Temp" text="11°C" />
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </VBox>
+                                <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="80.0">
+                                    <children>
+                                        <Label fx:id="day51" text="Sunday">
+                                            <VBox.margin>
+                                                <Insets />
+                                            </VBox.margin>
+                                        </Label>
+                                        <HBox prefHeight="100.0" prefWidth="200.0">
+                                            <children>
+                                                <ImageView fx:id="day7Img" fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+                                                <Label fx:id="day5Temp1" text="10°C" />
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </VBox>
+                                <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="80.0">
+                                    <children>
+                                        <Label fx:id="day61" text="Monday">
+                                            <VBox.margin>
+                                                <Insets />
+                                            </VBox.margin>
+                                        </Label>
+                                        <HBox prefHeight="100.0" prefWidth="200.0">
+                                            <children>
+                                                <ImageView fx:id="day8Img" fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+                                                <Label fx:id="day6Temp1" text="13°C" />
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </VBox>
+                                <Separator layoutX="600.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" />
+                                <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="80.0">
+                                    <children>
+                                        <Label fx:id="day62" text="Tuesday">
+                                            <VBox.margin>
+                                                <Insets />
+                                            </VBox.margin>
+                                        </Label>
+                                        <HBox prefHeight="100.0" prefWidth="200.0">
+                                            <children>
+                                                <ImageView fx:id="day9Img" fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+                                                <Label fx:id="day6Temp2" text="6°C" />
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </VBox>
+                                <Separator layoutX="686.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" />
+                                <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="80.0">
+                                    <children>
+                                        <Label fx:id="day63" text="Wednesday">
+                                            <VBox.margin>
+                                                <Insets />
+                                            </VBox.margin>
+                                        </Label>
+                                        <HBox prefHeight="100.0" prefWidth="200.0">
+                                            <children>
+                                                <ImageView fx:id="day10Img" fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+                                                <Label fx:id="day6Temp3" text="5°C" />
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </VBox>
+                                <Separator layoutX="772.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" />
+                                <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="80.0">
+                                    <children>
+                                        <Label fx:id="day64" text="Thursday">
+                                            <VBox.margin>
+                                                <Insets />
+                                            </VBox.margin>
+                                        </Label>
+                                        <HBox prefHeight="100.0" prefWidth="200.0">
+                                            <children>
+                                                <ImageView fx:id="day11Img" fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+                                                <Label fx:id="day6Temp4" text="12°C" />
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </VBox>
+                                <Separator layoutX="858.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" />
+                                <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="80.0">
+                                    <children>
+                                        <Label fx:id="day65" text="Friday">
+                                            <VBox.margin>
+                                                <Insets />
+                                            </VBox.margin>
+                                        </Label>
+                                        <HBox prefHeight="100.0" prefWidth="200.0">
+                                            <children>
+                                                <ImageView fx:id="day12Img" fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+                                                <Label fx:id="day6Temp5" text="11°C" />
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </VBox>
+                                <Separator layoutX="944.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" />
+                                <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="80.0">
+                                    <children>
+                                        <Label fx:id="day66" text="Monday">
+                                            <VBox.margin>
+                                                <Insets />
+                                            </VBox.margin>
+                                        </Label>
+                                        <HBox prefHeight="100.0" prefWidth="200.0">
+                                            <children>
+                                                <ImageView fx:id="day13Img" fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+                                                <Label fx:id="day6Temp6" text="6°C" />
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </HBox>
+                    </content>
+                </ScrollPane>
+                <Circle fill="#1f93ff00" layoutX="503.0" layoutY="327.0" radius="212.0" stroke="#52cbfc" strokeType="INSIDE" strokeWidth="4.0" />
+                <Label fx:id="artInt" alignment="CENTER" contentDisplay="CENTER" layoutX="181.0" layoutY="569.0" prefHeight="85.0" prefWidth="642.0" text="Alice: Scroll the bar to get details!" textAlignment="CENTER" textFill="#eeeeee">
+                    <font>
+                        <Font name="Corbel Bold" size="14.0" />
+                    </font>
+                </Label>
+                <Slider fx:id="timeSlider" blockIncrement="1.0" layoutX="112.0" layoutY="542.0" majorTickUnit="1.0" max="23.0" maxHeight="-Infinity" maxWidth="-Infinity" min="1.0" minHeight="-Infinity" minWidth="-Infinity" minorTickCount="0" prefHeight="40.0" prefWidth="782.0" showTickMarks="true" snapToTicks="true" />
+            </children>
+        </Pane>
     </children>
 </AnchorPane>
