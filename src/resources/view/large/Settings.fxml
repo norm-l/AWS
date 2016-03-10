@@ -7,8 +7,22 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="768.0" prefWidth="1024.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SettingsController">
-    <stylesheets>
-        <URL value="@/resources/css/settings.css"/>
-    </stylesheets>
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1024.0" styleClass="mainFxmlClass" stylesheets="@/resources/css/large/settings.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SettingsController">
+   <children>
+      <Pane layoutX="352.0" layoutY="120.0" prefHeight="480.0" prefWidth="320.0" />
+      <VBox layoutX="-1.0" layoutY="-1.0" prefHeight="720.0" prefWidth="1024.0">
+         <children>
+            <HBox layoutX="352.0" layoutY="151.0" prefHeight="78.0" prefWidth="1024.0" />
+            <HBox prefHeight="78.0" prefWidth="1024.0" />
+            <HBox prefHeight="78.0" prefWidth="1024.0" />
+            <HBox prefHeight="78.0" prefWidth="1024.0" />
+            <HBox prefHeight="78.0" prefWidth="1024.0" />
+            <HBox prefHeight="78.0" prefWidth="1024.0" />
+            <HBox prefHeight="78.0" prefWidth="1024.0" />
+            <HBox prefHeight="78.0" prefWidth="1024.0" />
+            <Label layoutX="352.0" layoutY="369.0" text="Change Country" />
+            <ListView fx:id="cityView" layoutX="352.0" layoutY="386.0" prefHeight="123.0" prefWidth="320.0" />
+         </children>
+      </VBox>
+   </children>
 </AnchorPane>

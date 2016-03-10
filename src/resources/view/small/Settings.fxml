@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
 <?import java.lang.*?>
 <?import java.net.*?>
 <?import java.util.*?>
@@ -7,20 +11,45 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="480.0" prefWidth="320.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SettingsController">
-    <stylesheets>
-        <URL value="@/resources/css/settings.css" />
-    </stylesheets>
+<AnchorPane id="AnchorPane" prefHeight="480.0" prefWidth="320.0" styleClass="mainFxmlClass" stylesheets="@../../css/small/settings.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SettingsController">
    <children>
-      <Pane prefHeight="480.0" prefWidth="320.0" />
-      <VBox layoutY="94.0" prefHeight="386.0" prefWidth="320.0">
+      <VBox prefHeight="480.0" prefWidth="320.0">
          <children>
             <HBox prefHeight="35.0" prefWidth="320.0">
                <children>
-                  <Label text="Turn AI Off" />
-                  <ToggleButton mnemonicParsing="false" text="Turn" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="327.0" text="Settings" textAlignment="CENTER" textFill="#727272">
+                     <font>
+                        <Font name="Corbel Bold" size="17.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </Label>
+               </children></HBox>
+            <HBox prefHeight="35.0" prefWidth="320.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="236.0" text="Label">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets right="200.0" />
+                     </padding>
+                  </Label>
+                  <Button mnemonicParsing="false" text="Button">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
                </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
             </HBox>
+            <HBox prefHeight="35.0" prefWidth="320.0" />
             <HBox prefHeight="35.0" prefWidth="320.0" />
             <HBox prefHeight="35.0" prefWidth="320.0" />
             <HBox prefHeight="35.0" prefWidth="320.0" />

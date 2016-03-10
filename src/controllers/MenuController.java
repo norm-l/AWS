@@ -38,8 +38,11 @@ public class MenuController implements Initializable {
             BorderPane border = Main.getRoot();
             border.setCenter(smallScreen);
             
-            Main.getStage().setWidth(320+16);
-            Main.getStage().setHeight(480+74);
+            Main.getStage().setWidth(320);
+            Main.getStage().setHeight(480+55);
+            
+            Main.getScene().getStylesheets().add(getClass()
+                .getResource("/resources/css/small/main.css").toExternalForm());
             
         } catch (IOException e) {
             e.printStackTrace();
@@ -56,8 +59,11 @@ public class MenuController implements Initializable {
             BorderPane border = Main.getRoot();
             border.setCenter(smallScreen);
             
-            Main.getStage().setWidth(320+16);
-            Main.getStage().setHeight(480+74);
+            Main.getStage().setWidth(320);
+            Main.getStage().setHeight(480+55);
+            
+            Main.getScene().getStylesheets().add(getClass()
+                .getResource("/resources/css/small/start.css").toExternalForm());
             
         } catch (IOException e) {
             e.printStackTrace();
@@ -74,8 +80,8 @@ public class MenuController implements Initializable {
             BorderPane border = Main.getRoot();
             border.setCenter(smallScreen);
             
-            Main.getStage().setWidth(320+16);
-            Main.getStage().setHeight(480+74);
+            Main.getStage().setWidth(320);
+            Main.getStage().setHeight(480+55);
             
         } catch (IOException e) {
             e.printStackTrace();
@@ -92,8 +98,11 @@ public class MenuController implements Initializable {
             BorderPane border = Main.getRoot();
             border.setCenter(largeScreen);
             
-            Main.getStage().setWidth(1024+15);
-            Main.getStage().setHeight(768+75);
+            Main.getStage().setWidth(1024);
+            Main.getStage().setHeight(720+55);
+            
+            Main.getScene().getStylesheets().add(getClass()
+                .getResource("/resources/css/large/main.css").toExternalForm());
             
         } catch (IOException e) {
             e.printStackTrace();
@@ -109,8 +118,11 @@ public class MenuController implements Initializable {
             BorderPane border = Main.getRoot();
             border.setCenter(largeScreen);
             
-            Main.getStage().setWidth(1024+15);
-            Main.getStage().setHeight(768+75);
+            Main.getStage().setWidth(1024);
+            Main.getStage().setHeight(720+55);
+            
+            Main.getScene().getStylesheets().add(getClass()
+                .getResource("/resources/css/large/start.css").toExternalForm());
             
         } catch (IOException e) {
             e.printStackTrace();
@@ -126,8 +138,11 @@ public class MenuController implements Initializable {
             BorderPane border = Main.getRoot();
             border.setCenter(largeScreen);
             
-            Main.getStage().setWidth(1024+15);
-            Main.getStage().setHeight(768+75);
+            Main.getStage().setWidth(1024);
+            Main.getStage().setHeight(720+55);
+            
+            Main.getScene().getStylesheets().add(getClass()
+                .getResource("/resources/css/large/settings.css").toExternalForm());
             
         } catch (IOException e) {
             e.printStackTrace();

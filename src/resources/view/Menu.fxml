@@ -6,25 +6,20 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<MenuBar xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MenuController">
+<MenuBar maxHeight="-Infinity" minHeight="-Infinity" prefHeight="25.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MenuController">
   <menus>
-    <Menu mnemonicParsing="false" text="Small">
+    <Menu mnemonicParsing="false" text="Small Version">
       <items>
         <MenuItem fx:id="displaySmallStart" mnemonicParsing="false" onAction="#switchToSmallStart" text="Start" />
             <MenuItem fx:id="displaySmallMain" mnemonicParsing="false" onAction="#switchToSmallMain" text="Main" />
             <MenuItem fx:id="displaySmallSettings" mnemonicParsing="false" onAction="#switchToSmallSettings" text="Settings" />
       </items>
     </Menu>
-    <Menu mnemonicParsing="false" text="Large (Incomplete)">
+    <Menu mnemonicParsing="false" text="Large Version">
       <items>
         <MenuItem fx:id="displayLargeStart" mnemonicParsing="false" onAction="#switchToLargeStart" text="Start" />
             <MenuItem fx:id="displayLargeMain" mnemonicParsing="false" onAction="#switchToLargeMain" text="Main" />
             <MenuItem fx:id="displayLargeSettings" mnemonicParsing="false" onAction="#switchToLargeSettings" text="Settings" />
-      </items>
-    </Menu>
-    <Menu mnemonicParsing="false" text="Help">
-      <items>
-        <MenuItem mnemonicParsing="false" text="About" />
       </items>
     </Menu>
   </menus>

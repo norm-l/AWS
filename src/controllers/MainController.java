@@ -43,29 +43,20 @@ public class MainController implements Initializable {
     
     @FXML private ImageView humView;
     
-    @FXML private Label day1;
-    @FXML private Label day1Temp;
+
     @FXML private ImageView day1Img;
-    
-    @FXML private Label day2;
-    @FXML private Label day2Temp;
     @FXML private ImageView day2Img;
-    
-    @FXML private Label day3;
-    @FXML private Label day3Temp;
     @FXML private ImageView day3Img;
-    
-    @FXML private Label day4;
-    @FXML private Label day4Temp;
     @FXML private ImageView day4Img;
-    
-    @FXML private Label day5;
-    @FXML private Label day5Temp;
     @FXML private ImageView day5Img;
-    
-    @FXML private Label day6;
-    @FXML private Label day6Temp;
     @FXML private ImageView day6Img;
+    @FXML private ImageView day7Img;
+    @FXML private ImageView day8Img;
+    @FXML private ImageView day9Img;
+    @FXML private ImageView day10Img;
+    @FXML private ImageView day11Img;
+    @FXML private ImageView day12Img;
+    @FXML private ImageView day13Img;
     
     @FXML private ImageView iconImg;
     
@@ -130,6 +121,23 @@ public class MainController implements Initializable {
         tempView.setImage(TEMPIMG);
         windView.setImage(WINDIMG);
         humView.setImage(HUMIMG);
+        
+        
+        
+        day1Img.setImage(CLEAR_DAY);
+        day2Img.setImage(CLEAR_DAY);
+        day3Img.setImage(RAIN);
+        day4Img.setImage(WIND);
+        day5Img.setImage(CLOUDY);
+        day6Img.setImage(CLOUDY);
+        day7Img.setImage(RAIN);
+        day8Img.setImage(RAIN);
+        day9Img.setImage(WIND);
+        day10Img.setImage(CLOUDY);
+        day11Img.setImage(PARTLY_CLOUDY_DAY);
+        day12Img.setImage(CLOUDY);
+        day13Img.setImage(RAIN);
+        
         
     }
 

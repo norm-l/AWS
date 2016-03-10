@@ -38,7 +38,7 @@ public class Main extends Application {
         
         scene = new Scene(ROOT, 320, 480+35);
         scene.getStylesheets().add(getClass()
-                .getResource("/resources/css/main.css").toExternalForm());
+                .getResource("/resources/css/small/start.css").toExternalForm());
         stage.setScene(scene);
         stage.setResizable(false);
         stage.show();
@@ -46,6 +46,10 @@ public class Main extends Application {
     
     public static Stage getStage() {
         return stage;
+    }
+    
+    public static Scene getScene() {
+        return scene;
     }
 
     public static void main(String[] args) {
