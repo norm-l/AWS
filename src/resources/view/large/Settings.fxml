@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.net.*?>
 <?import java.util.*?>
@@ -12,14 +14,187 @@
         <Pane layoutX="352.0" layoutY="120.0" prefHeight="480.0" prefWidth="320.0" />
         <VBox layoutX="-1.0" layoutY="-1.0" prefHeight="720.0" prefWidth="1024.0">
             <children>
-                <HBox layoutX="352.0" layoutY="151.0" prefHeight="78.0" prefWidth="1024.0" />
-                <HBox prefHeight="78.0" prefWidth="1024.0" />
-                <HBox prefHeight="78.0" prefWidth="1024.0" />
-                <HBox prefHeight="78.0" prefWidth="1024.0" />
-                <HBox prefHeight="78.0" prefWidth="1024.0" />
-                <HBox prefHeight="78.0" prefWidth="1024.0" />
-                <HBox prefHeight="78.0" prefWidth="1024.0" />
-                <HBox prefHeight="78.0" prefWidth="1024.0" />
+                <HBox layoutX="352.0" layoutY="151.0" prefHeight="78.0" prefWidth="1024.0">
+               <children>
+                  <Label prefHeight="51.0" prefWidth="147.0" text="Settings">
+                     <font>
+                        <Font size="35.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets left="450.0" right="440.0" top="5.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="5.0" right="5.0" top="5.0" />
+               </padding></HBox>
+                <HBox prefHeight="78.0" prefWidth="1024.0">
+               <children>
+                  <Label prefHeight="41.0" prefWidth="214.0" text="Temperature unit">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+                  <Button mnemonicParsing="false" prefHeight="36.0" prefWidth="103.0" text="Celsius">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin></Button>
+                  <Button layoutX="634.0" layoutY="30.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="103.0" text="Fahrenheit" />
+               </children>
+               <padding>
+                  <Insets left="300.0" top="20.0" />
+               </padding></HBox>
+            <HBox layoutX="10.0" layoutY="93.0" prefHeight="78.0" prefWidth="1024.0">
+               <children>
+                  <Label prefHeight="41.0" prefWidth="223.0" text="AI Interactivity">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+                  <Slider majorTickUnit="1.0" max="4.0" minorTickCount="0" prefHeight="41.0" prefWidth="299.0" showTickMarks="true" snapToTicks="true" />
+               </children>
+               <padding>
+                  <Insets left="300.0" top="20.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="171.0" prefHeight="78.0" prefWidth="1024.0">
+               <children>
+                  <Label prefHeight="41.0" prefWidth="303.0" text="Detect present location">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+                  <RadioButton mnemonicParsing="false" prefHeight="42.0" prefWidth="101.0" text="Allow">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton layoutX="613.0" layoutY="30.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="133.0" text="Don't Allow">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </RadioButton>
+               </children>
+               <padding>
+                  <Insets left="300.0" top="20.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="249.0" prefHeight="78.0" prefWidth="1024.0">
+               <children>
+                  <Label prefHeight="16.0" prefWidth="149.0" text="Wind Units">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+                  <RadioButton mnemonicParsing="false" prefHeight="42.0" prefWidth="108.0" text="KPH">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton mnemonicParsing="false" prefHeight="42.0" prefWidth="101.0" text="MPH">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </RadioButton>
+               </children>
+               <padding>
+                  <Insets left="300.0" top="20.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="327.0" prefHeight="78.0" prefWidth="1024.0">
+               <children>
+                  <Label prefHeight="41.0" prefWidth="167.0" text="AI Language">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+                  <Button mnemonicParsing="false" prefHeight="36.0" prefWidth="103.0" text="English">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin></Button>
+                  <Button layoutX="580.0" layoutY="30.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="103.0" text="Spanish">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button layoutX="477.0" layoutY="30.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="103.0" text="Chinese">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets left="300.0" top="20.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="483.0" prefHeight="78.0" prefWidth="1024.0">
+               <children>
+                  <Label prefHeight="41.0" prefWidth="282.0" text="Current version v1.01">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+                  <Button mnemonicParsing="false" prefHeight="36.0" prefWidth="152.0" text="Check for new updates" />
+               </children>
+               <padding>
+                  <Insets left="300.0" top="20.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="405.0" prefHeight="78.0" prefWidth="1024.0">
+               <children>
+                  <Label prefHeight="41.0" prefWidth="173.0" text="Rate the app">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+                  <Hyperlink prefHeight="42.0" prefWidth="195.0" text="www.amazingweathersystem.co.uk" />
+               </children>
+               <padding>
+                  <Insets left="300.0" top="20.0" />
+               </padding>
+            </HBox>
                 <Label layoutX="352.0" layoutY="369.0" text="Change Country" />
                 <ListView fx:id="cityView" layoutX="352.0" layoutY="386.0" prefHeight="123.0" prefWidth="320.0" />
             </children>
